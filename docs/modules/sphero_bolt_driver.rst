@@ -16,7 +16,3 @@ Scripts
 API Documentation
 -----------------
 
-.. automodule:: sphero_bolt_driver
-   :members:
-   :undoc-members:
-   :show-inheritance:

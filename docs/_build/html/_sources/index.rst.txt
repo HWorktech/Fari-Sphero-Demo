@@ -16,7 +16,7 @@ demo-iridia-swarm-robotics documentation
 ..    :caption: Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    installation
@@ -24,6 +24,7 @@ demo-iridia-swarm-robotics documentation
    architecture
    modules/sphero_bolt_controller
    modules/sphero_bolt_driver
+   
 
 Indices and tables
 ==================

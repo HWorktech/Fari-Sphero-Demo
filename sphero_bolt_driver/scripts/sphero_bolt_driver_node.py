@@ -428,6 +428,16 @@ class SpheroBolt():
     ### Utils
 
     def ms_to_speed(self, linear_x):
+        """
+        Check for a shake transition based on accelerometer data.
+
+        This method monitors the linear acceleration of the device and checks if it exceeds
+        75% of the gravitational constant (g) in either the x or y axis. If the acceleration
+        threshold is exceeded, the method logs the event, disables the IR signal, and returns True.
+
+        Returns:
+            bool: True if a shake transition is detected, False otherwise.
+        """
         bounded_speed = min(max(0, linear_x), self.target_max_speed) 
         sphero_speed = round((bounded_speed * 255)/self.MAX_BOLT_SPEED)  
         return sphero_speed 

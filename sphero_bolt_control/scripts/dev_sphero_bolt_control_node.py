@@ -365,6 +365,16 @@ class SpheroControl():
         return False
     
     def transition_shake(self):
+        """
+        Check for a shake transition based on accelerometer data.
+
+        This method monitors the linear acceleration of the device and checks if it exceeds
+        75% of the gravitational constant (g) in either the x or y axis. If the acceleration
+        threshold is exceeded, the method logs the event, disables the IR signal, and returns True.
+
+        Returns:
+            bool: True if a shake transition is detected, False otherwise.
+        """
         if (abs(self.imu.linear_acceleration.x) > 0.75 * self.GRAVITY
             or abs(self.imu.linear_acceleration.y) > 0.75 * self.GRAVITY):
             print("TRANSITION: SHAKE")

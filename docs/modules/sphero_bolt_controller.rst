@@ -16,7 +16,17 @@ Scripts
 API Documentation
 -----------------
 
-.. automodule:: sphero_bolt_control
+.. automodule:: dev_sphero_bolt_control_node
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: sphero_arena_control_node
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: template_sphero_bolt_control_node
    :members:
    :undoc-members:
    :show-inheritance:
