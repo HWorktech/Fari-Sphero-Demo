@@ -1,0 +1,36 @@
+.. demo-iridia-swarm-robotics documentation master file, created by
+   sphinx-quickstart on Mon Aug 19 16:14:38 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+demo-iridia-swarm-robotics documentation
+========================================
+
+.. Add your content using ``reStructuredText`` syntax. See the
+.. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
+.. documentation for details.
+
+
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: Contents:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   installation
+   usage
+   architecture
+   modules/sphero_bolt_control
+   modules/sphero_bolt_driver
+   api/sphero_bolt_control_api
+   api/sphero_bolt_driver_api
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
