@@ -4,6 +4,9 @@ build:
   os: "ubuntu-22.04"
   tools:
     python: "3.10"
+  commands: 
+    - git submodule update --init --recursive
+    - echo "Submodules have been initialized."
 
 python:
   install:

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphero Bolt Control Module &mdash; demo-iridia-swarm-robotics 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sphero Bolt Driver Module" href="driver.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            demo-iridia-swarm-robotics
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphero Bolt Control Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#launch-files">Launch Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scripts">Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sphero_bolt_control_node">API Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.B_AGGREGATE"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.B_AGGREGATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.B_BALLISTIC"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.B_BALLISTIC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.B_IDLE"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.B_IDLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.B_ROTATE"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.B_ROTATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.B_SPREAD"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.B_SPREAD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.PERIOD_CONTROL_CALLBACK"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.PERIOD_CONTROL_CALLBACK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.STATE_T_FILTER"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.STATE_T_FILTER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_BRIGHT"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_BRIGHT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_DARK"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_DARK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_M_SLEEP"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_M_SLEEP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_M_STATE"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_M_STATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_RANDOM_S"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_RANDOM_S</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_RESTART"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_RESTART</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_SHAKE"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_SHAKE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_STOP"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_STOP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.T_STUCK"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.T_STUCK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.clear_arena_leds"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.clear_arena_leds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.control_loop_callback"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.control_loop_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.create_ros_subscribers"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.create_ros_subscribers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.evaluate_state"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.evaluate_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.evaluate_transition"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.evaluate_transition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.iterate_fsm"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.iterate_fsm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.master_sleep_callback"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.master_sleep_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.master_state_callback"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.master_state_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.setup_sphero_parameters"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.setup_sphero_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.state_aggregate"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.state_aggregate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.state_ballistic"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.state_ballistic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.state_idle"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.state_idle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.state_rotate"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.state_rotate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.state_spread"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.state_spread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.transition_master_sleep"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.transition_master_sleep()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.transition_master_state"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.transition_master_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.transition_restart"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.transition_restart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphero_arena_control_node.SpheroArenaControl.transition_stop"><code class="docutils literal notranslate"><span class="pre">SpheroArenaControl.transition_stop()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="driver.html">Sphero Bolt Driver Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">faq and troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">demo-iridia-swarm-robotics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sphero Bolt Control Module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/controller.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphero-bolt-control-module">
+<span id="controller"></span><h1>Sphero Bolt Control Module<a class="headerlink" href="#sphero-bolt-control-module" title="Link to this heading"></a></h1>
+<p>This module contains the scripts and launch files necessary for controlling the Sphero Bolt in various scenarios.</p>
+<section id="launch-files">
+<h2>Launch Files<a class="headerlink" href="#launch-files" title="Link to this heading"></a></h2>
+<p>The module contains the 2 launch files:
+- <strong>launch/multi_sphero_control.launch</strong>:
+- <strong>launch/single_sphero_control.launch</strong>:</p>
+<p>As the name suggest, the first launch file is used to launch control for multiple robots at the same time, by sequentially launching the single_sphero_control.launch file.</p>
+</section>
+<section id="scripts">
+<h2>Scripts<a class="headerlink" href="#scripts" title="Link to this heading"></a></h2>
+<p>The module contains the following scripts:
+- <strong>scripts/sphero_bolt_control_node.py</strong>: This script is the main script that is used to control the robots. The script is responsible for sending the appropriate commands to the robots based on their position and the mission. The script is also responsible for receiving the robots messages and to process them if needed.
+- <strong>scripts/sphero_arena_control_node.py</strong>: This script is used to control the arena. The script is responsible for sending the appropriate commands to the arena based on the robots position and the mission. The script is also responsible for receiving the arena messages and to process them if needed.</p>
+</section>
+<section id="module-sphero_bolt_control_node">
+<span id="api-documentation"></span><h2>API Documentation<a class="headerlink" href="#module-sphero_bolt_control_node" title="Link to this heading"></a></h2>
+<p>sphero_bolt_control_node.py: a script to
+operate a Sphero BOLT robot with the Robot
+Operating System (ROS). The node is a match for
+sphero_bolt_driver_node.py</p>
+<p id="module-sphero_arena_control_node">sphero_arena_control_node.py: a script to
+control MoCA with the input of the Sphero BOLT
+robot. Based on the the Robot Operating System (ROS).
+The node is a match for sphero_bolt_control_node.py</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphero_arena_control_node.</span></span><span class="sig-name descname"><span class="pre">SpheroArenaControl</span></span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.B_AGGREGATE">
+<span class="sig-name descname"><span class="pre">B_AGGREGATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.B_AGGREGATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.B_BALLISTIC">
+<span class="sig-name descname"><span class="pre">B_BALLISTIC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.B_BALLISTIC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.B_IDLE">
+<span class="sig-name descname"><span class="pre">B_IDLE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.B_IDLE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.B_ROTATE">
+<span class="sig-name descname"><span class="pre">B_ROTATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.B_ROTATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.B_SPREAD">
+<span class="sig-name descname"><span class="pre">B_SPREAD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.B_SPREAD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.PERIOD_CONTROL_CALLBACK">
+<span class="sig-name descname"><span class="pre">PERIOD_CONTROL_CALLBACK</span></span><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.PERIOD_CONTROL_CALLBACK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.STATE_T_FILTER">
+<span class="sig-name descname"><span class="pre">STATE_T_FILTER</span></span><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.STATE_T_FILTER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_BRIGHT">
+<span class="sig-name descname"><span class="pre">T_BRIGHT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_BRIGHT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_DARK">
+<span class="sig-name descname"><span class="pre">T_DARK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_DARK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_M_SLEEP">
+<span class="sig-name descname"><span class="pre">T_M_SLEEP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_M_SLEEP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_M_STATE">
+<span class="sig-name descname"><span class="pre">T_M_STATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_M_STATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_RANDOM_S">
+<span class="sig-name descname"><span class="pre">T_RANDOM_S</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_RANDOM_S" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_RESTART">
+<span class="sig-name descname"><span class="pre">T_RESTART</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_RESTART" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_SHAKE">
+<span class="sig-name descname"><span class="pre">T_SHAKE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_SHAKE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_STOP">
+<span class="sig-name descname"><span class="pre">T_STOP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_STOP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.T_STUCK">
+<span class="sig-name descname"><span class="pre">T_STUCK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></em><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.T_STUCK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.clear_arena_leds">
+<span class="sig-name descname"><span class="pre">clear_arena_leds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.clear_arena_leds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.clear_arena_leds" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.control_loop_callback">
+<span class="sig-name descname"><span class="pre">control_loop_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.control_loop_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.control_loop_callback" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.create_ros_subscribers">
+<span class="sig-name descname"><span class="pre">create_ros_subscribers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.create_ros_subscribers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.create_ros_subscribers" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.evaluate_state">
+<span class="sig-name descname"><span class="pre">evaluate_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.evaluate_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.evaluate_state" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.evaluate_transition">
+<span class="sig-name descname"><span class="pre">evaluate_transition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.evaluate_transition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.evaluate_transition" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.iterate_fsm">
+<span class="sig-name descname"><span class="pre">iterate_fsm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.iterate_fsm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.iterate_fsm" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.master_sleep_callback">
+<span class="sig-name descname"><span class="pre">master_sleep_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.master_sleep_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.master_sleep_callback" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.master_state_callback">
+<span class="sig-name descname"><span class="pre">master_state_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.master_state_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.master_state_callback" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.setup_sphero_parameters">
+<span class="sig-name descname"><span class="pre">setup_sphero_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.setup_sphero_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.setup_sphero_parameters" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.state_aggregate">
+<span class="sig-name descname"><span class="pre">state_aggregate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.state_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.state_aggregate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.state_ballistic">
+<span class="sig-name descname"><span class="pre">state_ballistic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.state_ballistic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.state_ballistic" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.state_idle">
+<span class="sig-name descname"><span class="pre">state_idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.state_idle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.state_idle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.state_rotate">
+<span class="sig-name descname"><span class="pre">state_rotate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.state_rotate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.state_rotate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.state_spread">
+<span class="sig-name descname"><span class="pre">state_spread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.state_spread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.state_spread" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.transition_master_sleep">
+<span class="sig-name descname"><span class="pre">transition_master_sleep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.transition_master_sleep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.transition_master_sleep" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.transition_master_state">
+<span class="sig-name descname"><span class="pre">transition_master_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.transition_master_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.transition_master_state" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.transition_restart">
+<span class="sig-name descname"><span class="pre">transition_restart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.transition_restart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.transition_restart" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sphero_arena_control_node.SpheroArenaControl.transition_stop">
+<span class="sig-name descname"><span class="pre">transition_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphero_arena_control_node.html#SpheroArenaControl.transition_stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphero_arena_control_node.SpheroArenaControl.transition_stop" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="driver.html" class="btn btn-neutral float-right" title="Sphero Bolt Driver Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Florian Noussa Yao.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

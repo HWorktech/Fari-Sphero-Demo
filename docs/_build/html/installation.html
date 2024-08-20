@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; demo-iridia-swarm-robotics 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            demo-iridia-swarm-robotics
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-setup">Installation &amp; Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Sphero Bolt Control Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="driver.html">Sphero Bolt Driver Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">faq and troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">demo-iridia-swarm-robotics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>The installation below describes the steps to install THe Controller and the driver on the central computer and the Odroids. The installations of the other components are described in their respective technical reports and github repositories, see the <a class="reference external" href="overview">overview</a> for more details.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<p>You will need the following:</p>
+<p>Ubuntu 20.04 Focal Fossa installed on the central computer and each Odroid ( or Raspberry Pi) device.</p>
+<p>ROS Noetic installed on the central computer and each Raspberry Pi device.</p>
+<p>Python libraries: spherov2.py, bleak</p>
+</section>
+<section id="installation-setup">
+<h2>Installation &amp; Setup<a class="headerlink" href="#installation-setup" title="Link to this heading"></a></h2>
+<p>Installing Ubuntu 20.04 Focal Fossa on the PC and each raspberry pi: Detailed instructions and troubleshooting on: <a class="reference external" href="https://phoenixnap.com/kb/install-ubuntu-20-04">https://phoenixnap.com/kb/install-ubuntu-20-04</a> For the Raspberry Pi, you can use the Raspberry Pi Imager software to flash the SD card. Detailed instructions and troubleshooting on: <a class="reference external" href="https://www.yodeck.com/docs/how-to-articles/how-to-flash-an-sd-card-using-pi-imager/">https://www.yodeck.com/docs/how-to-articles/how-to-flash-an-sd-card-using-pi-imager/</a></p>
+<p>Installing Python 3.x: • Open a terminal window on the Ubuntu computer • Run the following command to update the package list: sudo apt-get update • Run the following command to install Python 3.x: sudo apt-get install python3</p>
+<p>Installing ROS Noetic: • Open a terminal window on the Ubuntu computer • Follow the instructions on the official ROS Noetic installation guide: <a class="reference external" href="http://wiki.ros.org/noetic/Installation/Ubuntu">http://wiki.ros.org/noetic/Installation/Ubuntu</a></p>
+<p>Installing this package: • Clone this project repository containing the controller software and the driver. • Open a terminal window and navigate to the spherov2.py folder in the package directory • Run the following command to get the submodule spherov2.py : git submodule update –init –recursive • Install the spherov2 dependencies, specifically bleak with: pip install bleak</p>
+<p>Setting Up the Raspberry Pi: • Install Ubuntu 20.04 Focal Fossa on each Raspberry Pi (following the steps in subsections 1) • Install Python 3.x and ROS Noetic on each Raspberry Pi (following the steps in subsections 2 and 3) • Clone the driver and controller software (following the steps in subsection 4)</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Florian Noussa Yao.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

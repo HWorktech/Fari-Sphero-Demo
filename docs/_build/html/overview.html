@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; demo-iridia-swarm-robotics 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to the Documentation of the Iridia Swarm Robotics Demonstration for Fari" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            demo-iridia-swarm-robotics
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#physicals-components">Physicals Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-components">Software Components</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Sphero Bolt Control Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="driver.html">Sphero Bolt Driver Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">faq and troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">demo-iridia-swarm-robotics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<span id="id1"></span><h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<section id="physicals-components">
+<h2>Physicals Components<a class="headerlink" href="#physicals-components" title="Link to this heading"></a></h2>
+<p>the demonstration consist of the following components:</p>
+<ul class="simple">
+<li><p><strong>Sphero bolt robots</strong>: the robots used in the demonstration are Sphero bolt robots. These robots are small, spherical robots that can move in any direction. They are equipped with a variety of sensors and can be controlled using a smartphone or a computer. The robots are lightweight and durable, making them ideal for use in the demonstration. they can run this specific demonstration for an hour on a single charge.</p></li>
+</ul>
+<p>More details about the robots can be found in the <a class="reference external" href="https://www.sphero.com/">Sphero website</a>.</p>
+<ul class="simple">
+<li><p><strong>Computer</strong>: the computer is needed to launch the demonstration and subjacent process. A fondamental concept in swarm robotics is the decentralization, meaning that each robot is autonomous and can make decisions independently without a central entity. However, in some case like ours, robots need to communicated with each other, but sphero bolt specificly does only has limited communication capabilities. Ultimately, the computer is used as a communication hub between the robots and the arena. Called “Master” in the code, the computer is responsible of receiving each robots messages, process if needed and send back the appropriate message to corresponding robots, all through the ROS framework.</p></li>
+</ul>
+<p>Any ubuntu computer with ROS noetic installed can be used to run the demonstration. Optionally, they pc could need a bluetooth adapter to communicate with the robots.
+More on configuration and installation can be found in the <a class="reference external" href="installation">installation</a> section.</p>
+<ul class="simple">
+<li><p><strong>Odroids</strong>: the odroids are small computers that are used to control the robots. Sphero Bolt robots are not able to run code on their own, and their shape does not allow to add any additional hardware. Therefore a computer is needed to do the processing and send the appropriate commands to the robots. Since a bluetooth adapter can only handle 5 robots at the same time in a stable way, we use up to 3 odroids to control up to 15 robots.</p></li>
+<li><p><strong>Arena</strong>: the arena is trapezoidal in shape and is made of 16 blocks and 4 corners. each block contains a led strip that can be controlled individually. the blocks are link together through magnets and wire. the arena is controller by an arduino board that is connected to a computer, and powered by a AC adapter block.</p></li>
+</ul>
+<p>More details about the arena, the materials needed and the assembly can be found in the <a class="reference external" href="arena">arena technical report</a>.</p>
+<ul class="simple">
+<li><p><strong>Camera</strong>: the camera is used to detect the robots and to track their position. the camera is connected to a computer through a ROS topicand is used to provide a live feed of the demonstration. The camera also served in the demonstration, to detect sufficient aggregated robots in a specific area since bolt robots are not equipped with a camera or any other sensors to detect the number of robots in a specific area.</p></li>
+</ul>
+</section>
+<section id="software-components">
+<h2>Software Components<a class="headerlink" href="#software-components" title="Link to this heading"></a></h2>
+<p>The main software components associeted with this repository are just listed below and are described in more details in the corresponding sections.</p>
+<ul class="simple">
+<li><p><strong>Visualization</strong>: A front end that displays the robots as drone in a Brussels replica 3D environment. The front end is use to visualize the mission and intereaction of robot and support the explanation of the demonstration to the audience.</p></li>
+</ul>
+<p>More details about the visualization can be found in the <a class="reference external" href="loreipsum">frontend github repository</a>.</p>
+<ul class="simple">
+<li><p><strong>Camera</strong>: the camera is linked to an image recognition software that is able to detect the robots and to track their position. The camera publish on a ROS topic the position of al the robots detected.</p></li>
+</ul>
+<p>More details about the camera can be found in the <a class="reference external" href="loreipsum">camera github repository</a>.</p>
+<ul class="simple">
+<li><p><strong>Arena</strong>: the arena is not impact the robots mission, it is mainly used to provide a visual feedback of the robots behaviour to the audience. The master computer is responsible of launching the arena controller taht will managed the led strip of the arena through a ROS topic messages.</p></li>
+<li><p><strong>Controller</strong>: the controller is the main package that is used to control the robots. The controller is responsible for sending the appropriate commands to the robots based on their position and the mission. The controller is also responsible for receiving the robots messages and to process them if needed.</p></li>
+<li><p><strong>Driver</strong>: the driver is the package that is used to communicate with the robots. The driver is responsible for sending the appropriate commands to the robots and to receive their messages. The driver is also responsible for handling the communication between the robots and the master computer. the driver is based on an non official sphero bolt python library <a href="#id2"><span class="problematic" id="id3">`spheroV2&lt;loreipsum&gt;`_</span></a>. Despite the impressive capabilities of this library, to have a satble working system, we had to make some modification to the library. More details about the driver can be found in the library fork: <a class="reference external" href="loreipsum">repository</a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the Documentation of the Iridia Swarm Robotics Demonstration for Fari" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Florian Noussa Yao.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
