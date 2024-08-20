@@ -39,7 +39,9 @@ extensions = [
 
 project = 'demo-iridia-swarm-robotics'
 copyright = '2024, Florian Noussa Yao'
-author = 'David Garzón Ramos \n Siméon Michel \n Florian Noussa Yao'
+author = """David Garzón Ramos 
+Siméon Michel
+Florian Noussa Yao"""
 release = '0.0.1'
 version = '0.0.1'
 
