@@ -1,3 +1,4 @@
+numpy
 sphinx_rtd_theme == 2.1.0rc1
 sphinx-autodoc-typehints
-rospy
+
