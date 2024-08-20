@@ -9,6 +9,13 @@
 import os
 import sys
 from unittest.mock import Mock
+import os
+import subprocess
+
+def update_submodules():
+    subprocess.run(['git', 'submodule', 'update', '--init', '--recursive'], check=True)
+
+update_submodules()
 
 
 sys.path.insert(0, os.path.abspath('../sphero_bolt_control/scripts'))
