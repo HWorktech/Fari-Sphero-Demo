@@ -6,6 +6,7 @@ build:
     python: "3.10"
   commands:
     - git submodule update --init --recursive
+    - sphinx-build -b html docs/ $READTHEDOCS_OUTPUT/html
 
 python:
   install:
