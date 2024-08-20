@@ -6,7 +6,6 @@ build:
     python: "3.10"
   commands: 
     - git submodule update --init --recursive
-    - echo "Submodules have been initialized."
 
 python:
   install:
