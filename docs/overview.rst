@@ -32,13 +32,13 @@ Software Components
 The main software components associeted with this repository are just listed below and are described in more details in the corresponding sections.
 
 - **Visualization**: A front end that displays the robots as drone in a Brussels replica 3D environment. The front end is use to visualize the mission and intereaction of robot and support the explanation of the demonstration to the audience.
-More details about the visualization can be found in the `frontend github repository <loreipsum>`_.
+More details about the visualization can be found in the `frontend github repository <loreipsum.com>`_.
 
 - **Camera**: the camera is linked to an image recognition software that is able to detect the robots and to track their position. The camera publish on a ROS topic the position of al the robots detected. 
-More details about the camera can be found in the `camera github repository <loreipsum>`_.
+More details about the camera can be found in the `camera github repository <loreipsum.com>`_.
 
 - **Arena**: the arena is not impact the robots mission, it is mainly used to provide a visual feedback of the robots behaviour to the audience. The master computer is responsible of launching the arena controller taht will managed the led strip of the arena through a ROS topic messages.
 
 - **Controller**: the controller is the main package that is used to control the robots. The controller is responsible for sending the appropriate commands to the robots based on their position and the mission. The controller is also responsible for receiving the robots messages and to process them if needed.
 
-- **Driver**: the driver is the package that is used to communicate with the robots. The driver is responsible for sending the appropriate commands to the robots and to receive their messages. The driver is also responsible for handling the communication between the robots and the master computer. the driver is based on an non official sphero bolt python library `spheroV2<loreipsum>`_. Despite the impressive capabilities of this library, to have a satble working system, we had to make some modification to the library. More details about the driver can be found in the library fork: `repository <loreipsum>`_.
+- **Driver**: the driver is the package that is used to communicate with the robots. The driver is responsible for sending the appropriate commands to the robots and to receive their messages. The driver is also responsible for handling the communication between the robots and the master computer. the driver is based on an non official sphero bolt python library `spheroV2 <loreipsum.com>`_. Despite the impressive capabilities of this library, to have a satble working system, we had to make some modification to the library. More details about the driver can be found in the library fork: `repository <loreipsum.com>`_.

@@ -114,15 +114,15 @@ More on configuration and installation can be found in the <a class="reference e
 <ul class="simple">
 <li><p><strong>Visualization</strong>: A front end that displays the robots as drone in a Brussels replica 3D environment. The front end is use to visualize the mission and intereaction of robot and support the explanation of the demonstration to the audience.</p></li>
 </ul>
-<p>More details about the visualization can be found in the <a class="reference external" href="loreipsum">frontend github repository</a>.</p>
+<p>More details about the visualization can be found in the <a class="reference external" href="loreipsum.com">frontend github repository</a>.</p>
 <ul class="simple">
 <li><p><strong>Camera</strong>: the camera is linked to an image recognition software that is able to detect the robots and to track their position. The camera publish on a ROS topic the position of al the robots detected.</p></li>
 </ul>
-<p>More details about the camera can be found in the <a class="reference external" href="loreipsum">camera github repository</a>.</p>
+<p>More details about the camera can be found in the <a class="reference external" href="loreipsum.com">camera github repository</a>.</p>
 <ul class="simple">
 <li><p><strong>Arena</strong>: the arena is not impact the robots mission, it is mainly used to provide a visual feedback of the robots behaviour to the audience. The master computer is responsible of launching the arena controller taht will managed the led strip of the arena through a ROS topic messages.</p></li>
 <li><p><strong>Controller</strong>: the controller is the main package that is used to control the robots. The controller is responsible for sending the appropriate commands to the robots based on their position and the mission. The controller is also responsible for receiving the robots messages and to process them if needed.</p></li>
-<li><p><strong>Driver</strong>: the driver is the package that is used to communicate with the robots. The driver is responsible for sending the appropriate commands to the robots and to receive their messages. The driver is also responsible for handling the communication between the robots and the master computer. the driver is based on an non official sphero bolt python library <a href="#id2"><span class="problematic" id="id3">`spheroV2&lt;loreipsum&gt;`_</span></a>. Despite the impressive capabilities of this library, to have a satble working system, we had to make some modification to the library. More details about the driver can be found in the library fork: <a class="reference external" href="loreipsum">repository</a>.</p></li>
+<li><p><strong>Driver</strong>: the driver is the package that is used to communicate with the robots. The driver is responsible for sending the appropriate commands to the robots and to receive their messages. The driver is also responsible for handling the communication between the robots and the master computer. the driver is based on an non official sphero bolt python library <a class="reference external" href="loreipsum.com">spheroV2</a>. Despite the impressive capabilities of this library, to have a satble working system, we had to make some modification to the library. More details about the driver can be found in the library fork: <a class="reference external" href="loreipsum.com">repository</a>.</p></li>
 </ul>
 </section>
 </section>

@@ -4,14 +4,12 @@ build:
   os: "ubuntu-22.04"
   tools:
     python: "3.10"
-  commands: 
+  commands:
     - git submodule update --init --recursive
-    - sphinx-build -b html docs/ _build/html
 
 python:
   install:
     - requirements: docs/requirements.txt
-     # Install our python package before building the docs
     - method: pip
       path: .
 
